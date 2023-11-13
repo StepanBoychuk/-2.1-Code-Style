@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cli-progress": "^3.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "3.1.0"
+  },
+  "scripts": {
+    "format": "prettier --write . && eslint --fix .",
+    "lint": "prettier --check . && eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "git add"
+    ]
+  }
+}
