@@ -10,12 +10,8 @@
   },
   "scripts": {
     "format": "prettier --write . && eslint --fix .",
-    "lint": "prettier --check . && eslint ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint": "prettier --check . && eslint .",
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
